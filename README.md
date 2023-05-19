@@ -4,13 +4,8 @@ A new Flutter project.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+Drive Link for video of the app showing functionalities:- 
+https://drive.google.com/file/d/1OzkQVQvJgZz7aHF9vwWHQXED8f-az0Qq/view?usp=share_link
 
-A few resources to get you started if this is your first Flutter project:
+https://github.com/Pockerman20/Sorting-Visualizer/assets/90500919/8a524576-1524-4196-9595-c5c12a559e7b
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
