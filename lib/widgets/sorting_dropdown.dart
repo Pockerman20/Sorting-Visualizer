@@ -4,10 +4,10 @@ import 'package:sortingvisualizer/utils/utils.dart';
 
 class SortingDropdown extends StatelessWidget {
   final String _value;
-  final ValueChanged<String> _onChanged;
+  final ValueChanged<String?>? _onChanged;
 
   const SortingDropdown(
-      {@required String value, ValueChanged<String> onChanged})
+      {required String value, required ValueChanged<String?>? onChanged})
       : this._value = value,
         this._onChanged = onChanged,
         assert(value != null),
@@ -36,7 +36,7 @@ class SortingDropdown extends StatelessWidget {
                 (SortingType sortingType) => DropdownMenuItem<String>(
                   value: getSortingTypeString(sortingTypes: sortingType),
                   child: Text(
-                    getSortingTypeString(sortingTypes: sortingType),
+                    getSortingTypeString(sortingTypes: sortingType) ?? "",
                   ),
                 ),
               )

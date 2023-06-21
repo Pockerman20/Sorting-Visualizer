@@ -5,14 +5,14 @@ class Bar extends StatelessWidget {
   final double _margin;
   final double _barWidth;
   final int _animationSpeed;
-  final Color _color;
+  final Color? _color;
 
   const Bar({
-    @required double height,
-    @required double margin,
-    @required double barWidth,
-    @required int animationSpeed,
-    Color color,
+    required double height,
+    required double margin,
+    required double barWidth,
+    required int animationSpeed,
+    Color? color,
   })  : this._height = height,
         this._margin = margin,
         this._barWidth = barWidth,

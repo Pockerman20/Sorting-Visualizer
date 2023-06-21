@@ -11,7 +11,11 @@ enum SortingType {
   QUICK_SORT,
 }
 
-// ignore: non_constant_identifier_names
-final ShapeBorder SHAPE = RoundedRectangleBorder(
+// final ShapeBorder SHAPE = RoundedRectangleBorder(
+//   borderRadius: BorderRadius.circular(10.0),
+// );
+
+final OutlinedBorder? SHAPE = RoundedRectangleBorder(
   borderRadius: BorderRadius.circular(10.0),
 );
+

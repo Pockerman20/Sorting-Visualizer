@@ -1,7 +1,7 @@
 import 'package:meta/meta.dart';
 import 'package:sortingvisualizer/data/constants.dart';
 
-String getSortingTypeString({@required SortingType sortingTypes}) {
+String? getSortingTypeString({required SortingType sortingTypes}) {
   switch (sortingTypes) {
     case SortingType.BUBBLE_SORT:
       return "Bubble Sort";
@@ -18,7 +18,7 @@ String getSortingTypeString({@required SortingType sortingTypes}) {
   return null;
 }
 
-SortingType getSortingType({@required String value}) {
+SortingType? getSortingType({required String value}) {
   switch (value) {
     case 'Bubble Sort':
       return SortingType.BUBBLE_SORT;

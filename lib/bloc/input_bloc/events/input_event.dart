@@ -5,7 +5,7 @@ abstract class AbstractInputEvent {}
 class DigitInputEvent extends AbstractInputEvent {
   final String _digit;
 
-  DigitInputEvent({@required String digit})
+  DigitInputEvent({required String digit})
       : this._digit = digit,
         assert(digit != null);
 

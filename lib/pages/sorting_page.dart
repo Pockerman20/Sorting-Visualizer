@@ -21,8 +21,9 @@ class SortingPage extends StatelessWidget {
 
     List<int> array = sortingProvider.array;
     List<int> indexArr = sortingProvider.indexArr;
-    String value =
-        getSortingTypeString(sortingTypes: sortingProvider.selectedSortingType);
+    String value = getSortingTypeString(
+            sortingTypes: sortingProvider.selectedSortingType) ??
+        "BUBBLE_SORT";
     double animationSpeed = sortingProvider.animationSpeed;
     int swapI = sortingProvider.swapI;
     int swapJ = sortingProvider.swapJ;
@@ -42,7 +43,7 @@ class SortingPage extends StatelessWidget {
     List<double> marginArr =
         indexArr.map((int value) => (barMargin + (division * value))).toList();
 
-    Widget bar({@required double height, @required double width, Color color}) {
+    Widget bar({required double height, required double width, Color? color}) {
       return Bar(
         height: height,
         margin: width,
@@ -60,22 +61,22 @@ class SortingPage extends StatelessWidget {
               width: marginArr[index],
               color: swapping
                   ? index == swapI
-                      ? Colors.red
+                      ? Colors.red.shade900
                       : index == swapJ
-                          ? Colors.green
+                          ? Colors.green.shade900
                           : null
                   : null,
             ));
 
     Widget dropDownButton = SortingDropdown(
       value: value,
-      onChanged: (String value) {
+      onChanged: (String? value) {
         sortingProvider.changeSortingTypeSelection(
-            sortingType: getSortingType(value: value));
+            sortingType: getSortingType(value: value ?? "Bubble Sort"));
       },
     );
 
-    Widget button({@required String text, @required Function onPressed}) {
+    Widget button({required String text, required Function onPressed}) {
       return RoundedButton(
         text: text,
         onPressed: () async {

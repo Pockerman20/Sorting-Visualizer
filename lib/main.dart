@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hydrated_bloc/hydrated_bloc.dart';
@@ -5,6 +7,7 @@ import 'package:path_provider/path_provider.dart';
 import 'package:sortingvisualizer/bloc/input_bloc/input_bloc.dart';
 import 'package:sortingvisualizer/bloc/theme_bloc/theme_bloc.dart';
 import 'package:sortingvisualizer/pages/home_page.dart';
+import 'package:sortingvisualizer/pages/launch_page.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -46,14 +49,22 @@ class MyApp extends StatelessWidget {
           ),
           darkTheme: ThemeData(
             brightness: Brightness.dark,
-            accentColor: Colors.blueAccent,
-            buttonColor: Colors.blueAccent,
+            hintColor: Colors.blueAccent,
+            // buttonColor: Colors.blueAccent,
+            buttonTheme: ButtonThemeData(
+              buttonColor: Colors.blueAccent,
+            ),
             iconTheme: IconThemeData(
               color: Colors.grey.shade100,
             ),
           ),
           themeMode: themeMode,
-          home: HomePage(),
+          // home: LaunchScreen(),
+          initialRoute: '/',
+          routes: {
+            '/': (context) => LaunchScreen(),
+            '/home': (context) => HomePage(),
+          },
         );
       },
     );

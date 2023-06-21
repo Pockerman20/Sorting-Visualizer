@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/widgets.dart';
 import 'package:sortingvisualizer/data/constants.dart';
 
@@ -13,7 +15,7 @@ class SortingProvider extends ChangeNotifier {
 
   SortingType _selectedSortingType = SortingType.BUBBLE_SORT;
 
-  SortingProvider({@required int size, @required List<int> array})
+  SortingProvider({required int size, required List<int> array})
       : this._size = size,
         this._arr = array,
         this._backupArray = List<int>.from(array),
@@ -47,8 +49,8 @@ class SortingProvider extends ChangeNotifier {
             _animationSpeed.toInt() == 0 ? 0 : _animationSpeed.toInt() + 100,
       ));
 
-  void changeSortingTypeSelection({@required SortingType sortingType}) {
-    this._selectedSortingType = sortingType;
+  void changeSortingTypeSelection({required SortingType? sortingType}) {
+    this._selectedSortingType = sortingType!;
     reset();
   }
 
@@ -245,8 +247,10 @@ class SortingProvider extends ChangeNotifier {
     int m = (mid - start) + 1;
     int n = (end - mid);
 
-    List<int> arr1 = List(m);
-    List<int> arr2 = List(n);
+    // List<int> arr1 = List(m);
+    // List<int> arr2 = List(n);
+    List<int> arr1 = List<int>.filled(m, 0);
+    List<int> arr2 = List<int>.filled(n, 0);
 
     int i, j, k = start;
 

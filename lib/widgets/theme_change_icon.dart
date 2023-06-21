@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class ThemeChangingIcon extends StatelessWidget {
   final ThemeMode _themeMode;
 
-  const ThemeChangingIcon({@required ThemeMode themeMode})
+  const ThemeChangingIcon({required ThemeMode themeMode})
       : this._themeMode = themeMode,
         assert(themeMode != null);
 

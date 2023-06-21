@@ -13,7 +13,7 @@ class ThemeBloc extends HydratedCubit<ThemeMode> {
   }
 
   @override
-  ThemeMode fromJson(Map<String, dynamic> json) {
+  ThemeMode? fromJson(Map<String, dynamic> json) {
     switch (json['themeMode']) {
       case "light":
         return ThemeMode.light;
@@ -26,7 +26,7 @@ class ThemeBloc extends HydratedCubit<ThemeMode> {
 
   @override
   Map<String, dynamic> toJson(ThemeMode state) {
-    String themeModeStr;
+    String? themeModeStr;
 
     if (state == ThemeMode.light) {
       themeModeStr = "light";

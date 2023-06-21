@@ -3,9 +3,9 @@ import 'package:sortingvisualizer/data/constants.dart';
 
 class RoundedButton extends StatelessWidget {
   final String _text;
-  final Function _onPressed;
+  final VoidCallback? _onPressed;
 
-  const RoundedButton({@required String text, Function onPressed})
+  const RoundedButton({required String text, VoidCallback? onPressed})
       : this._text = text,
         this._onPressed = onPressed,
         assert(text != null);

@@ -4,7 +4,7 @@ abstract class AbstractInputState {
   final String _bars;
   final String _error;
 
-  AbstractInputState({@required String bars, @required String error})
+  AbstractInputState({required String bars, required String error})
       : this._bars = bars,
         this._error = error,
         assert(bars != null),
@@ -20,15 +20,14 @@ class InitialInputState extends AbstractInputState {
 }
 
 class CorrectInputState extends AbstractInputState {
-  CorrectInputState({@required String bars}) : super(bars: bars, error: "");
+  CorrectInputState({required String bars}) : super(bars: bars, error: "");
 }
 
 class ErrorInputState extends AbstractInputState {
-  ErrorInputState({@required String bars, @required String error})
+  ErrorInputState({required String bars, required String error})
       : super(bars: bars, error: error);
 }
 
 class VisualizeInputState extends AbstractInputState {
-  VisualizeInputState({@required String bars})
-      : super(bars: bars, error: "");
+  VisualizeInputState({required String bars}) : super(bars: bars, error: "");
 }

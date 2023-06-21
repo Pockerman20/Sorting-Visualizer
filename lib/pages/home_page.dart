@@ -11,6 +11,7 @@ import 'package:sortingvisualizer/provider/sorting_provider.dart';
 import 'package:sortingvisualizer/widgets/theme_change_icon.dart';
 
 class HomePage extends StatefulWidget {
+  static String routeName = "HomePage";
   @override
   _HomePageState createState() => _HomePageState();
 }
@@ -18,14 +19,13 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    // ignore: close_sinks
     InputBloc inputBloc = BlocProvider.of<InputBloc>(context);
     ThemeBloc themeBloc = BlocProvider.of<ThemeBloc>(context);
 
     Widget button(
-        {@required Widget child,
-        @required String value,
-        @required AbstractInputEvent inputEvent}) {
+        {required Widget child,
+        required String value,
+        required AbstractInputEvent inputEvent}) {
       return Expanded(
         child: MaterialButton(
           onPressed: () {
